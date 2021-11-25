@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MissingX -Jims Rohini</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css"/>
+</head>
+<body onload="loading()">
+    <div id="loading"></div>
+  <% include ./partials/header.ejs %>
+  <div class="img6">
+  <div class="center">
+    <div class="btns">
+      <a href="/claim" style="background-color: goldenrod;">Claim  <i class="fas fa-plus-circle"></i>  Item</a><br><br><br><br>
+      <a href="/lostitemlist" style="color: black; background-color:rgb(177, 162, 25);">Lost Item List</a>
+      <a href="/founditemlist" style="background-color:rgb(177, 162, 25);">Found Item List</a>
+    </div></div>
+<script>
+  var preloader = document.getElementById('loading'); 
+  function loading() {
+    preloader.style.display ='none';
+  }
+</script>
+</body>
+</html>

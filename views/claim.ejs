@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MissingX -Jims Rohini</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css"/>
+   </head>
+   <body onload="loading()">
+    <div id="loading"></div>
+  <% include ./partials/header.ejs %>
+  <div class="img5" style="color: black;">
+
+    <div class="container centertopage">
+      <h2>Claim A Product:</h2>
+      <h4>Submit Product Details**</h5>
+      <!-- Form starts -->
+      <form id="contact-form" method="post" action="" role="form">
+
+          <div class="messages"></div>
+      
+          <div class="controls">
+              <div class="row">
+                  
+                  <div class="col-md-6">
+
+                      <div class="form-group">
+                          <label for="form_name">Item name *</label>
+                          <input id="form_name" type="text" name="name" class="form-control" placeholder="Please Enter Your Item Name *" required="required" data-error="Item name is required.">
+                          <div class="help-block with-errors"></div>
+                      </div>
+                  </div>
+                  <div class="col-md-6">
+                      <div class="form-group">
+                          <label for="form_lastname">Founder name *</label>
+                          <input required id="form_lastname" type="text" name="founder" class="form-control" placeholder="Please Enter Founder Name *" required="required" data-error="Location is required.">
+                          <div class="help-block with-errors"></div>
+                      </div>
+                  </div>
+              </div>
+
+              <div class="row">
+                      <div class="col-md-4">
+                          <div class="form-group">
+                              <label for="example-date-input" class="col-2 col-form-label">Date\Time (When You Lost Item)</label>
+                              <div class="col-10">
+                                  <input class="form-control" name="date" type="date" value="2021-11-01" id="example-date-input">
+                              </div>
+                          </div>
+                      </div><br><br><br><br>
+                 
+                  <div class="form-group">
+                      <label for="location">Location Where Item Found</label>
+                      <input class="form-control" type= lat: Number,lng: Number, name="location" id="location" placeholder="Please Enter Location Where Item Found">
+                  </div>
+                  <br>
+                  
+                 <div class="form-group">
+                      <label for="form_isLost">This Item Belong To Me</label>
+                      <input type="checkbox" id="form_isLost" name="verify" value="true" required />
+                  </div>
+                  
+                  <div class="row" >
+                      <div class="col-md-12">
+                          <p class="text-muted" style="color: red;">
+                              <strong>*</strong> These fields are required. We will do our best to find your item.
+                          </p>
+                      </div>
+                  </div>
+
+                  <div class="col-md-12" align="right">
+                      <a href="/items"><br><li  class=" btn btn-default col-xs-1 col-sm-1 col-md-1 col-lg-1"><i class="fa fa-backward" aria-hidden="true"></i></li></a>           
+                      <button type="submit" class="btn btn-success btn-send" value="Add Query">Add Query</button>
+                     
+                  </div><br>
+                   
+              </div>
+              
+              
+          </div>
+      
+      </form>
+  </div>
+
+
+  </div>
+  <div class="bg-warning">       
+    <% include ./partials/footer.ejs %></div>  
+<script>
+  var preloader = document.getElementById('loading'); 
+  function loading() {
+    preloader.style.display ='none';
+  }
+</script>
+</body>
+</html>
